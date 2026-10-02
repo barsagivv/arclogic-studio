@@ -21,3 +21,9 @@ What RailWorld declares: Device or other IDs collected AND shared (AdMob uses th
 id for its own serving); App interactions, Crash logs and Diagnostics collected only (Firebase
 is a service provider processing on our behalf, which is exempt from "shared"); encrypted in
 transit; no accounts; data deletion by request at the privacy policy URL.
+
+## data-safety-quack-blast.csv
+
+Quack Blast's Data safety answers: RailWorld's (same SDKs: AdMob + Firebase Analytics + Firebase Cloud Messaging), with the
+deletion URL pointing at the game's own policy. After importing, also add Location -> Approximate location by hand
+(collected and shared, advertising and fraud prevention).

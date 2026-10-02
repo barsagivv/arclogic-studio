@@ -22,6 +22,7 @@ pick the folder name once and leave it alone.
 |---|---|
 | RailWorld | <https://barsagivv.github.io/arclogic-studio/railworld/privacy-policy.html> |
 | Crowd Runner | <https://barsagivv.github.io/arclogic-studio/crowd-runner/privacy-policy.html> |
+| Quack Blast | <https://barsagivv.github.io/arclogic-studio/quack-blast/privacy-policy.html> (terms: `quack-blast/terms.html`) |
 
 Crowd Runner's original page at `barsagivv.github.io/crowd-runner-site/privacy-policy.html`
 is the one currently filed with Play and still works; the copy here is so that every game
