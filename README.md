@@ -23,6 +23,7 @@ pick the folder name once and leave it alone.
 | RailWorld | <https://barsagivv.github.io/arclogic-studio/railworld/privacy-policy.html> |
 | Crowd Runner | <https://barsagivv.github.io/crowd-runner-site/privacy-policy.html> (terms: `crowd-runner-site/terms.html`) - its own repo, see below |
 | Quack Blast | <https://barsagivv.github.io/arclogic-studio/quack-blast/privacy-policy.html> (terms: `quack-blast/terms.html`) |
+| Bar Remote | <https://barsagivv.github.io/arclogic-studio/bar-remote/privacy-policy.html> (collects nothing; iPhone only) |
 
 Crowd Runner's pages live only in the `crowd-runner-site` repo: the installed app, Google Play
 and its AdMob consent message all link there. The copies that used to sit in `crowd-runner/`
