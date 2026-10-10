@@ -21,9 +21,11 @@ pick the folder name once and leave it alone.
 | Game | Privacy policy |
 |---|---|
 | RailWorld | <https://barsagivv.github.io/arclogic-studio/railworld/privacy-policy.html> |
-| Crowd Runner | <https://barsagivv.github.io/arclogic-studio/crowd-runner/privacy-policy.html> |
+| Crowd Runner | <https://barsagivv.github.io/crowd-runner-site/privacy-policy.html> (terms: `crowd-runner-site/terms.html`) - its own repo, see below |
 | Quack Blast | <https://barsagivv.github.io/arclogic-studio/quack-blast/privacy-policy.html> (terms: `quack-blast/terms.html`) |
 
-Crowd Runner's original page at `barsagivv.github.io/crowd-runner-site/privacy-policy.html`
-is the one currently filed with Play and still works; the copy here is so that every game
-has a home in one place.
+Crowd Runner's pages live only in the `crowd-runner-site` repo: the installed app, Google Play
+and its AdMob consent message all link there. The copies that used to sit in `crowd-runner/`
+here went stale (July text, without the September analytics and purchases sections), so since
+2026-10-10 those two files only forward to `crowd-runner-site`. Edit Crowd Runner's policy there,
+never here.
