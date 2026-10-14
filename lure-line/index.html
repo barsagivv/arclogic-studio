@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Lure Line: Fishing Puzzle, a daily fishing-line logic puzzle by DoublePixel. Support, contact and policies.">
+<title>Lure Line — Fishing Puzzle</title>
+<style>
+  :root{--sea:#0E3B4A;--sea2:#185A6B;--sand:#E8C994;--sand2:#C99A52;--cream:#FBF4E6;
+        --ink:#0E2A33;--text:#2E4750;--muted:#5D6F75;--link:#0E6476;--line:#EFE4CF}
+  *{box-sizing:border-box}
+  body{margin:0;background:linear-gradient(160deg,#F8EFDD,#EFE2C6);color:var(--ink);
+       font:16px/1.7 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;padding:34px 16px}
+  .card{max-width:780px;margin:0 auto 28px;background:#FFFDF9;border-radius:22px;overflow:hidden;
+        box-shadow:0 16px 46px rgba(14,42,51,.16)}
+  .hero{background:linear-gradient(135deg,var(--sea),var(--sea2));color:var(--cream);padding:36px 36px 30px;
+        border-bottom:4px solid var(--sand)}
+  .hero h1{margin:0;font-size:30px;letter-spacing:.2px}
+  .hero .sub{margin-top:8px;font-size:14px;color:var(--sand)}
+  .hero .tag{margin:14px 0 0;font-size:17px;line-height:1.6;color:var(--cream)}
+  .hero .switch{margin-top:12px;font-size:14px}
+  .hero .switch a{color:var(--cream);text-decoration:underline}
+  .body{padding:26px 36px 34px}
+  .body h2{font-size:18px;margin:28px 0 6px;color:var(--ink);border-inline-start:4px solid var(--sand2);padding-inline-start:11px}
+  .body p,.body li{color:var(--text)}
+  .body ul{padding-inline-start:22px}
+  .links{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:12px 0 0}
+  .links a{display:block;border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:#FFFBF2;
+           font-weight:600;color:var(--link)}
+  .links a span{display:block;font-weight:400;font-size:13px;color:var(--muted)}
+  .links a:hover{text-decoration:none;border-color:var(--sand2)}
+  a{color:var(--link);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .foot{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+  @media (max-width:560px){body{padding:20px 16px}.hero{padding:28px 22px 24px}.hero h1{font-size:26px}.body{padding:20px 22px 26px}}
+</style>
+</head>
+<body>
+  <div class="card" id="en" lang="en" dir="ltr">
+    <div class="hero">
+      <h1>Lure Line</h1>
+      <div class="sub">Fishing Puzzle · by DoublePixel</div>
+      <p class="tag">A calm daily logic puzzle about fishing. Draw one line from your boat through every water
+      tile, hook the fish from smallest to biggest, and finish on the trophy. Then reel in and see what you
+      caught.</p>
+      <div class="switch"><a href="#he">עברית ↓</a></div>
+    </div>
+    <div class="body">
+      <h2>How it plays</h2>
+      <ul>
+        <li>Every puzzle has exactly one solution and never needs a guess.</li>
+        <li>The daily pond is the same for every player and changes at your local midnight. Keep your streak
+        going.</li>
+        <li>Your catches fill a fish log and your own aquarium.</li>
+        <li>Weekly leagues, the weekend derby (Friday to Sunday) and world leaderboards. Players appear with a
+        nickname made from fixed words and a drawn avatar. There is no chat.</li>
+        <li>Relaxed mode hides clocks and times, and colour-blind symbols are available.</li>
+        <li>Plays offline; the online features work when you are connected.</li>
+        <li>In English, Hebrew, Spanish, Portuguese, German, French, Japanese and Korean.</li>
+      </ul>
+
+      <h2>Free to play</h2>
+      <p>Lure Line is free and supported by ads: reward videos you choose to watch, and full-screen ads between
+      levels after the first levels. Optional purchases: Remove Ads, pearls, the Starter Pack, streak freezes and
+      the Angler Club subscription. For Android phones (Google Play) and iPhone (App Store).</p>
+
+      <h2>Support and contact</h2>
+      <p>Lure Line is made by Bar Sagiv under the studio name DoublePixel. On Google Play the developer is shown
+      as ArcLogic Studio, and on the App Store the seller is Bar Sagiv.</p>
+      <p>A question, a bug, or a problem with a purchase? Email
+      <a href="mailto:barsagivv@gmail.com?subject=Lure%20Line">barsagivv@gmail.com</a>. Please include your player
+      name (Settings &rarr; Your name), your phone model, and the version number shown at the bottom of
+      Settings.</p>
+      <ul>
+        <li><strong>Restore purchases:</strong> Settings &rarr; Restore purchases, on the same Apple or Google
+        account.</li>
+        <li><strong>Cancel the Angler Club:</strong> in your store's subscription settings (iPhone: Settings
+        &rarr; your name &rarr; Subscriptions; Android: Google Play Store &rarr; your profile picture &rarr;
+        Payments &amp; subscriptions &rarr; Subscriptions).</li>
+        <li><strong>Daily reminder on or off:</strong> Settings &rarr; Daily reminder.</li>
+        <li><strong>Ad privacy:</strong> Settings &rarr; Ad privacy choices (shown where it applies).</li>
+        <li><strong>Delete your data:</strong> Settings &rarr; Delete my data, or see the page below.</li>
+      </ul>
+
+      <h2>Policies</h2>
+      <div class="links">
+        <a href="privacy-policy.html">Privacy Policy<span>What the Game uses and why</span></a>
+        <a href="terms.html">Terms of Use<span>Playing, purchases and the Angler Club</span></a>
+        <a href="delete-account.html">Delete your account and data<span>In the app or by email</span></a>
+        <a href="../">ArcLogic Studio<span>Our other games</span></a>
+      </div>
+
+      <div class="foot">© 2026 DoublePixel (Bar Sagiv; ArcLogic Studio on Google Play) · Lure Line ·
+      <a href="mailto:barsagivv@gmail.com">barsagivv@gmail.com</a> · Last updated 13 October 2026</div>
+    </div>
+  </div>
+
+  <div class="card" id="he" lang="he" dir="rtl">
+    <div class="hero">
+      <h1>Lure Line</h1>
+      <div class="sub">פאזל דייג · מבית DoublePixel</div>
+      <p class="tag">חידת היגיון יומית ורגועה על דייג. ציירו קו אחד מהסירה דרך כל משבצות המים, תפסו את הדגים
+      מהקטן לגדול, וסיימו בגביע. אחר כך גלגלו את החכה וגלו מה תפסתם.</p>
+      <div class="switch"><a href="#en">English ↑</a></div>
+    </div>
+    <div class="body">
+      <h2>איך משחקים</h2>
+      <ul>
+        <li>לכל חידה יש פתרון אחד בדיוק, ואף פעם לא צריך לנחש.</li>
+        <li>האגם היומי זהה לכל השחקנים ומתחלף בחצות לפי השעון שלכם. שמרו על הרצף.</li>
+        <li>הדגים שתפסתם ממלאים יומן דגים ואקווריום משלכם.</li>
+        <li>ליגות שבועיות, דרבי סוף השבוע (שישי עד ראשון) וטבלאות מובילים עולמיות. השחקנים מופיעים עם כינוי
+        שמורכב ממילים קבועות ואווטאר מצויר. אין צ'אט.</li>
+        <li>מצב רגוע מסתיר שעונים וזמנים, ויש סמלים לעיוורון צבעים.</li>
+        <li>אפשר לשחק בלי אינטרנט; התכונות המקוונות עובדות כשאתם מחוברים.</li>
+        <li>בעברית, אנגלית, ספרדית, פורטוגזית, גרמנית, צרפתית, יפנית וקוריאנית.</li>
+      </ul>
+
+      <h2>חינם לשחק</h2>
+      <p>Lure Line חינמי ונתמך בפרסומות: סרטוני תגמול שאתם בוחרים לצפות בהם, ופרסומות במסך מלא בין שלבים אחרי
+      השלבים הראשונים. רכישות לבחירתכם: הסרת פרסומות, פנינים, חבילת הפתיחה, הקפאות רצף ומנוי מועדון הדייגים.
+      לטלפוני אנדרואיד (Google Play) ולאייפון (App Store).</p>
+
+      <h2>תמיכה ויצירת קשר</h2>
+      <p>את Lure Line יוצר בר שגיב תחת שם הסטודיו DoublePixel. ב-Google Play המפתח מופיע בשם
+      <bdi>ArcLogic Studio</bdi>, וב-App Store המוכר הוא <bdi>Bar Sagiv</bdi>.</p>
+      <p>שאלה, באג או בעיה ברכישה? כתבו ל-<a
+      href="mailto:barsagivv@gmail.com?subject=Lure%20Line">barsagivv@gmail.com</a>. צרפו בבקשה את שם השחקן
+      שלכם (הגדרות &larr; השם שלי), את דגם הטלפון ואת מספר הגרסה שמופיע בתחתית ההגדרות.</p>
+      <ul>
+        <li><strong>שחזור רכישות:</strong> הגדרות &larr; שחזור רכישות, באותו חשבון Apple או Google.</li>
+        <li><strong>ביטול מועדון הדייגים:</strong> בהגדרות המינויים של החנות (אייפון: הגדרות &larr; השם שלכם
+        &larr; מינויים; אנדרואיד: חנות Google Play &larr; תמונת הפרופיל &larr; תשלומים ומינויים &larr;
+        מינויים).</li>
+        <li><strong>הפעלה או כיבוי של התזכורת היומית:</strong> הגדרות &larr; תזכורת יומית.</li>
+        <li><strong>פרטיות בפרסומות:</strong> הגדרות &larr; הגדרות פרטיות לפרסומות (מוצג איפה שזה
+        רלוונטי).</li>
+        <li><strong>מחיקת הנתונים:</strong> הגדרות &larr; מחיקת הנתונים שלי, או הדף שלמטה.</li>
+      </ul>
+
+      <h2>מדיניות ותנאים</h2>
+      <div class="links">
+        <a href="privacy-policy.html#he">מדיניות פרטיות<span>במה המשחק משתמש ולמה</span></a>
+        <a href="terms.html#he">תנאי שימוש<span>המשחק, הרכישות ומועדון הדייגים</span></a>
+        <a href="delete-account.html#he">מחיקת החשבון והנתונים<span>באפליקציה או באימייל</span></a>
+        <a href="../"><bdi>ArcLogic Studio</bdi><span>המשחקים האחרים שלנו</span></a>
+      </div>
+
+      <div class="foot">© 2026 DoublePixel (בר שגיב; <bdi>ArcLogic Studio</bdi> ב-Google Play) · Lure Line ·
+      <a href="mailto:barsagivv@gmail.com">barsagivv@gmail.com</a> · עודכן לאחרונה ב-13 באוקטובר 2026</div>
+    </div>
+  </div>
+</body>
+</html>

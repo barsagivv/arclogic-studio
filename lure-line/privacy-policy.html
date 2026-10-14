@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="How the mobile game Lure Line uses information, and the choices you have.">
+<title>Lure Line — Privacy Policy</title>
+<style>
+  :root{--sea:#0E3B4A;--sea2:#185A6B;--sand:#E8C994;--sand2:#C99A52;--cream:#FBF4E6;
+        --ink:#0E2A33;--text:#2E4750;--muted:#5D6F75;--link:#0E6476;--line:#EFE4CF}
+  *{box-sizing:border-box}
+  body{margin:0;background:linear-gradient(160deg,#F8EFDD,#EFE2C6);color:var(--ink);
+       font:16px/1.7 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;padding:34px 16px}
+  .card{max-width:780px;margin:0 auto 28px;background:#FFFDF9;border-radius:22px;overflow:hidden;
+        box-shadow:0 16px 46px rgba(14,42,51,.16)}
+  .hero{background:linear-gradient(135deg,var(--sea),var(--sea2));color:var(--cream);padding:36px 36px 30px;
+        border-bottom:4px solid var(--sand)}
+  .hero h1{margin:0;font-size:28px;letter-spacing:.2px}
+  .hero .sub{margin-top:8px;font-size:14px;color:var(--sand)}
+  .hero .switch{margin-top:12px;font-size:14px}
+  .hero .switch a{color:var(--cream);text-decoration:underline}
+  .body{padding:26px 36px 34px}
+  .body h2{font-size:18px;margin:28px 0 6px;color:var(--ink);border-inline-start:4px solid var(--sand2);padding-inline-start:11px}
+  .body p,.body li{color:var(--text)}
+  .body ul,.body ol{padding-inline-start:22px}
+  .note{background:#FBF1DC;border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:18px 0}
+  .note ul{margin:6px 0 0}
+  a{color:var(--link);text-decoration:none}
+  a:hover{text-decoration:underline}
+  bdi{white-space:nowrap}
+  .foot{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+  @media (max-width:560px){body{padding:20px 16px}.hero{padding:28px 22px 24px}.hero h1{font-size:24px}.body{padding:20px 22px 26px}}
+</style>
+</head>
+<body>
+  <div class="card" id="en" lang="en" dir="ltr">
+    <div class="hero">
+      <h1>Privacy Policy</h1>
+      <div class="sub">Lure Line · DoublePixel · Last updated 13 October 2026</div>
+      <div class="switch"><a href="#he">עברית ↓</a></div>
+    </div>
+    <div class="body">
+      <p>This policy explains what information the mobile game <strong>Lure Line</strong> (in the stores:
+      "Lure Line: Fishing Puzzle", the "Game") uses, why, and what you can do about it. The Game is made and
+      published by Bar Sagiv, an independent developer in Israel, under the studio name
+      <strong>DoublePixel</strong> ("we", "us"). On Google Play the developer is shown as <strong>ArcLogic
+      Studio</strong>, and on the App Store the seller is <strong>Bar Sagiv</strong>: all three names are the same
+      publisher. Bar Sagiv is responsible for this information (its "controller" under data-protection law).
+      Questions: <a href="mailto:barsagivv@gmail.com">barsagivv@gmail.com</a>.</p>
+
+      <div class="note">
+        <strong>In short</strong>
+        <ul>
+          <li>No sign-up, email, password or real name. The Game gives you a random account id.</li>
+          <li>Your progress lives on your phone, with a backup copy on our server.</li>
+          <li>Leagues, the derby and leaderboards show only a nickname made from fixed words and a drawn
+          avatar. There is no chat and no free text.</li>
+          <li>Ads come from Google AdMob. In Europe, the UK and Switzerland they are personalised only if you
+          agree; elsewhere you can turn personalised ads off (section 5).</li>
+          <li>Payments go through Apple or Google. We never see your card.</li>
+          <li>You can delete your data at any time in Settings &rarr; Delete my data (section 14 says what
+          stays).</li>
+        </ul>
+      </div>
+
+      <h2>1. On your phone</h2>
+      <p>The Game keeps your progress on your phone: levels, catches, your aquarium, your streak, coins, pearls
+      and diamonds, items you earned or bought, your nickname and avatar, play statistics (ponds solved, time,
+      hints), a record of your store purchases (what you bought, the store's transaction ids and the total you
+      spent), counters of the ads you watched, and your settings (sound, music, vibration, language, graphics,
+      relaxed mode, colour-blind symbols, reminder time). It also creates a random id for this copy of the
+      Game. Uninstalling the Game removes this data from the phone, but not the backup on our server
+      (see section 14). If your phone backs up apps (Android backup to your Google account, or an iCloud or
+      computer backup of an iPhone), the backup may hold a copy of this data, under your phone's backup
+      settings.</p>
+
+      <h2>2. Your game account</h2>
+      <p>There is no login. When the Game first goes online, it signs in anonymously with
+      <strong>Firebase Authentication</strong> (Google), which creates a random account id. This account is not
+      linked to your name, email address or phone number. We never see your Apple ID or Google account, but if
+      you buy something, the store's purchase record is linked to your account id (section 6). Firebase keeps
+      the account id and when it was created and last used, and may process your IP address to protect the
+      sign-in service.
+      The Game plays fully offline; the online features simply wait until you are connected.</p>
+
+      <h2>3. What our server stores</h2>
+      <p>Our server is a Google Cloud / Firebase project in the United States (a Cloud Firestore database in the
+      US multi-region "nam5", and Cloud Functions in us-central1). The Game cannot read or write the database
+      directly: every request goes through our server functions, which check it first. Linked to your random
+      account id, the server stores:</p>
+      <ul>
+        <li><strong>Cloud save:</strong> a backup copy of your game progress (the same data as on your phone),
+        sent at most once a minute while you play.</li>
+        <li><strong>Nickname and avatar:</strong> the nickname is an adjective, a fish and a number, picked from
+        fixed lists of pre-approved words and shown in each player's own language. Until you choose one, the
+        server makes one from your account id. The avatar is one of the portraits drawn for the Game. You cannot
+        type any text.</li>
+        <li><strong>Weekly league:</strong> your tier and group, your points, your total solving time and the
+        number of ponds counted that week. Players in your group (up to 30) see your nickname, avatar, points
+        and place.</li>
+        <li><strong>Weekend derby:</strong> your time on each of the five derby ponds and whether it was perfect.
+        Your group sees your nickname, avatar, points and place.</li>
+        <li><strong>World leaderboards</strong> (Top Tycoon, Top Merger, Top Catches): your best scores for all
+        time and for the current week, with your nickname and avatar. Every player can see the top 100 and their
+        own rank.</li>
+        <li><strong>Daily pond results:</strong> your time and number of hints on the daily pond, used to show how
+        you compare with everyone (for example "faster than 70% of players"). They are kept for 5 days and then
+        deleted automatically, normally within a day after that.</li>
+        <li><strong>Pond statistics:</strong> when you solve a pond, your time and hints are added to that pond's
+        totals (how many players solved it, how fast, how many without a hint). The totals do not contain your
+        id. Your record only notes that the pond was counted, so it counts once.</li>
+        <li><strong>Fair-play checks:</strong> before a result counts, the server re-plays the pond with the
+        Game's own rules (the line you drew, your time and hints). It keeps the number of ponds and fish it
+        verified for you, to check your leaderboard scores, and the dates your record was created and last
+        used.</li>
+        <li><strong>Reward inbox:</strong> league and derby rewards waiting for you, and whether you collected
+        them.</li>
+        <li><strong>Technical logs:</strong> Google Cloud records requests to our server. They can include your
+        account id, your IP address and, for a rejected result, the reason. They are kept for a limited time,
+        normally about 30 days.</li>
+      </ul>
+      <p>There is no chat, no free text, no user-made content and no friends list, and the Game does not read
+      your contacts, your photos or your precise location.</p>
+      <p>If you email us, we receive your email address and your message (section 13 says how long we keep
+      them).</p>
+
+      <h2>4. Checking that the app is genuine</h2>
+      <p>Our server checks every result itself before it counts (section 3). The Game does not use
+      device-integrity checks today. If we add them (for example Google Play Integrity or Apple App Attest,
+      through Firebase App Check), we will update this policy first.</p>
+
+      <h2>5. Advertising</h2>
+      <p>The Game is free and shows ads from <strong>Google AdMob</strong>:</p>
+      <ul>
+        <li>rewarded videos that you choose to watch for something in the Game, such as a hint, double coins, a
+        streak freeze or repair, or a bonus in your aquarium. The button always says what the video gives;</li>
+        <li>full-screen ads between levels, only after the first levels, never the first time you open the Game,
+        and never after the daily pond, the derby or the monthly event. Remove Ads and the Angler Club turn these
+        off.</li>
+      </ul>
+      <p>How often full-screen ads appear is decided on your phone, from your progress, your play sessions and
+      whether you have bought something (players who have bought something see fewer of them, or none).</p>
+      <p>AdMob may collect: your device's advertising identifier (the Android advertising ID; on iPhone the IDFA,
+      only if you allow tracking) and other device identifiers; your IP address and the approximate location it
+      shows (not GPS); device and app information (model, operating system, language, app version); and which
+      ads were shown, watched and tapped, with diagnostics. Google uses this to show and measure ads, limit
+      repeats, prevent fraud and, if you agree, personalise ads.</p>
+      <ul>
+        <li><strong>Europe, the UK and Switzerland:</strong> before the Game loads its first ad, it shows
+        Google's consent message. Ads are personalised only if you agree. If the consent check cannot be
+        completed, the Game shows only non-personalised ads.</li>
+        <li><strong>US states with privacy laws:</strong> you can opt out of personalised (targeted) ads.</li>
+        <li><strong>Everywhere else:</strong> ads may be personalised unless you turn this off: on Android in
+        Settings &rarr; Google &rarr; Ads (delete or reset the advertising ID), on iPhone by not allowing
+        tracking.</li>
+        <li>You can change your choice at any time in <strong>Settings &rarr; Ad privacy choices</strong>
+        (shown where it applies).</li>
+        <li><strong>iPhone:</strong> the Game asks your permission to track (App Tracking Transparency). If you
+        say no, your IDFA is not shared and the Game works the same.</li>
+        <li>Ads are limited to Google's "Teen" content rating or milder.</li>
+      </ul>
+
+      <h2>6. Purchases</h2>
+      <p>Purchases are optional: Remove Ads, pearl packs, the Starter Pack, streak freezes and streak repair, and
+      the Angler Club subscription. Payment is handled by the <strong>Apple App Store</strong> or
+      <strong>Google Play</strong>; we never see your card or payment details. Purchases are managed with
+      <strong>RevenueCat</strong>. RevenueCat receives from the store the purchase record (product, price,
+      currency, date, store country, transaction id and subscription status), your game account id (before the
+      Game first goes online, a random id instead), the random id of this copy of the Game and, where analytics
+      is on, its Google Analytics app instance id (section 7), and basic device and app information (operating
+      system, app version) with your IP address. RevenueCat sends purchase events to our server (which stores
+      them linked to your game account id) and, where analytics is on, to Google Analytics. We use this to give
+      you what you bought, restore it, handle refunds and count sales.</p>
+      <p>Which offers the Shop shows you is decided on your phone, from your progress, your play sessions and
+      whether you have bought something. These choices, and how often ads appear (section 5), have no legal or
+      similarly significant effect on you.</p>
+
+      <h2>7. Analytics</h2>
+      <p>The Game uses <strong>Google Analytics for Firebase</strong> to understand how the Game is played in
+      aggregate: for example which levels players reach, where they stop, how hints, ads and the shop are used,
+      and which connection errors happen. These game events are recorded with an app instance id, the device
+      model, operating system, language and approximate country. They are not linked to your real identity, and
+      we do not try to identify individual players. In Europe, the UK and Switzerland, analytics stays off until
+      you agree in Google's consent message (section 5), and you can change your choice in Settings &rarr; Ad
+      privacy choices. Google Analytics keeps the individual events for 2 months; after that only aggregated
+      reports remain.</p>
+      <p>The Game also downloads its settings from <strong>Firebase Remote Config</strong>, using a Firebase
+      installation id, your device's language and your IP address (from which Google works out an approximate
+      country). This is not linked to your game account. We sometimes test two versions of a setting (for
+      example how often ads appear or which offers show), and you may be placed in a test group at random.</p>
+
+      <h2>8. Reminders</h2>
+      <p>Daily reminders are off until you turn them on. The Game offers them after your first daily pond, and
+      you can set them in <strong>Settings &rarr; Daily reminder</strong> (morning, lunch, evening or off). You
+      get at most one a day: "today's pond is ready" at the time you picked or, when you have a streak of 2 days
+      or more and have not played yet that day, "your streak ends tonight" at 22:00. If you start an Angler Club
+      free trial, the Game may also remind you 2 days before it ends; this counts toward the one-a-day limit.
+      Reminders are scheduled on your phone itself: no server and no push token are involved. Turn them off in
+      the same setting or in your phone's notification settings.</p>
+
+      <h2>9. Sharing a catch</h2>
+      <p>When you share a catch card, the Game makes the image on your phone and hands it to your phone's share
+      sheet; it goes only where you send it. On iPhone, saving a card to Photos asks your permission first
+      (add-only access). We do not receive the image.</p>
+
+      <h2>10. Why we use it (legal bases)</h2>
+      <ul>
+        <li>To run the Game and its online features (cloud save, leagues, derby, leaderboards, rewards): this is
+        needed to provide the Game you asked for (our agreement with you, the <a href="terms.html">Terms of
+        Use</a>).</li>
+        <li>To keep competition fair and the service secure (result checks, limits, logs): our legitimate
+        interest in fair play and in protecting the Game.</li>
+        <li>To show the ads that keep the Game free: in Europe, the UK and Switzerland, your consent in Google's
+        message to store and read information on your device and, if you choose, to personalise ads; without it,
+        Google may still show limited ads that do not use that information. If the message cannot load, the Game
+        asks only for non-personalised ads, based on our legitimate interest in keeping the Game free.
+        Elsewhere, our legitimate interest, and you can opt out of personalised ads (section 5).</li>
+        <li>To process purchases: our agreement with you, and legal duties such as accounting and tax.</li>
+        <li>To improve the Game with analytics: in Europe, the UK and Switzerland, your consent; elsewhere, our
+        legitimate interest.</li>
+        <li>To set and test the Game's settings, and to choose which offers to show and how often ads appear:
+        our legitimate interest in keeping the Game free, fair and fun to play.</li>
+        <li>Reminders: only when you choose them.</li>
+        <li>To answer your emails and requests: our legitimate interest in helping you, and our legal duties for
+        requests about your data.</li>
+      </ul>
+      <p>We do not sell your personal information for money.</p>
+      <p>You are not required by law to give us any information. The Game needs the online data in section 3 for
+      its online features; without a connection, or after Delete my data, the puzzles still play on your
+      phone.</p>
+
+      <h2>11. Who receives it</h2>
+      <p>We share information only with the services that run the Game for us: Google (Firebase Authentication,
+      Cloud Firestore, Cloud Functions, Firebase Remote Config, Google Analytics for Firebase, AdMob, Google
+      Play), Apple (App Store, App Tracking Transparency) and RevenueCat. These services must protect it with the
+      same or equal protection as this policy describes. Other players see only your nickname, avatar, scores and
+      places. We may also disclose information when the law requires it. Their own policies:</p>
+      <ul>
+        <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+        <li><a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps that use its services</a></li>
+        <li><a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a></li>
+        <li><a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a></li>
+        <li><a href="https://www.revenuecat.com/privacy">RevenueCat Privacy Policy</a></li>
+      </ul>
+
+      <h2>12. Where it is stored</h2>
+      <p>Our server's data is stored in the United States. Google, Apple and RevenueCat may also process data in
+      other countries. We run the Game from Israel, which the European Commission recognises as giving adequate
+      protection to personal data. Google LLC is certified under the EU-U.S. Data Privacy Framework (with its UK
+      and Swiss extensions), and Google and RevenueCat protect data from the European Economic Area, the UK and
+      Switzerland with the European Commission's standard contractual clauses in their data processing terms.
+      Data of players in Israel is transferred abroad under these providers' written data-protection
+      commitments. You can ask us for a copy of these safeguards.</p>
+
+      <h2>13. How long we keep it</h2>
+      <ul>
+        <li>On your phone: until you delete it (Delete my data, or uninstalling the Game).</li>
+        <li>Cloud save, nickname and avatar, league and derby entries, leaderboard entries, reward inbox and
+        fair-play records: while your account exists. Delete my data removes them.</li>
+        <li>Daily pond results: 5 days, then deleted automatically, normally within a day after that.</li>
+        <li>Pond statistics: kept only as anonymous totals.</li>
+        <li>Technical logs: normally about 30 days.</li>
+        <li>Purchase records: Apple and Google keep theirs under their own rules. Your customer record at
+        RevenueCat and the purchase events on our server are kept while your account exists, and Delete my data
+        deletes them. The stores' sales reports to us, which do not name your game account, are kept as long as
+        accounting and tax law requires.</li>
+        <li>Analytics events: 2 months; after that only aggregated reports remain.</li>
+        <li>Ad data held by Google: under Google's own retention rules.</li>
+        <li>Emails to us: as long as needed to answer you; for requests about your data, 2 years, as a record
+        that we handled them.</li>
+      </ul>
+
+      <h2>14. Deleting your data</h2>
+      <p>In the Game: <strong>Settings &rarr; Delete my data &rarr; Delete everything</strong>. Our server deletes
+      your cloud save, your league and derby entries for every week, your leaderboard entries, your recent daily
+      pond results, your player record (nickname, avatar, reward inbox, fair-play records), your customer record
+      at RevenueCat, the purchase events on our server and your game account. Once the server confirms, the Game
+      erases the data on your phone and starts again as a new player.</p>
+      <p>Your cloud save is first replaced by an empty "deleted" marker, so that a copy still on its way cannot
+      bring your progress back. The marker holds no game data and is removed automatically within 3 days.
+      Technical logs are removed within about 30 days, and Google's backups within about 6 months. Pond totals
+      stay, because they do not identify you. Apple and Google keep their own purchase records, so Settings
+      &rarr; Restore purchases, on the same Apple or Google account, still brings back Remove Ads, the Starter
+      Pack's boat and an active Angler Club (RevenueCat then makes a new record from the store's receipt).
+      Deleting your data does not cancel a subscription.</p>
+      <p>Without the app: see <a href="delete-account.html">Delete your account and data</a>, or email us.</p>
+
+      <h2>15. Your rights</h2>
+      <p>Wherever you live, including Israel, you can ask us to see, correct or delete your information. In
+      Israel you can also complain to the Privacy Protection Authority.</p>
+      <p>Under the GDPR and the UK GDPR you can also ask to restrict or object to its use (including use based on
+      our legitimate interests) and to receive a copy in a portable format. You can withdraw consent at any time:
+      Settings &rarr; Ad privacy choices for ads and analytics, your iPhone's tracking setting (Settings &rarr; Privacy &amp;
+      Security &rarr; Tracking), and Settings &rarr; Daily reminder. You can also complain to your local data
+      protection authority.</p>
+      <p>Under US state privacy laws (such as California's) you can ask to know what we hold, to get a copy, to
+      correct or delete it, and to opt out of targeted advertising, which some of these laws call a "sale" or
+      "sharing" of personal information. Use Ad privacy choices in the Game or your phone's ad settings (Android:
+      Settings &rarr; Google &rarr; Ads; iPhone: Settings &rarr; Privacy &amp; Security &rarr; Tracking). We will
+      not treat you differently for using these rights.</p>
+      <p>For California and other US states: we collect identifiers (your game account id, the id of this copy
+      of the Game, device and advertising identifiers, IP address), commercial information (purchase history),
+      internet or other electronic network activity (game events, ads shown and tapped) and approximate location
+      (from your IP address). We collect them from you, your device, Apple, Google and RevenueCat, use them for
+      the purposes in section 10 and disclose them to the services in section 11. We do not collect sensitive
+      personal information. We do not sell personal information for money, but Google's use of identifiers and
+      ad activity for personalised ads may count as a "sale" or "sharing"; you can opt out as described above.
+      We do not knowingly sell or share the personal information of anyone under 16. You can make a request
+      through an authorised agent; we may ask the agent for proof and ask you to confirm.</p>
+      <p>To make a request, email <a href="mailto:barsagivv@gmail.com">barsagivv@gmail.com</a>. We reply within
+      30 days. As there is no login, tell us your player name and avatar (Settings &rarr; Your name), roughly
+      when you started and the level you reached, and, if you bought something, the order number from the
+      store's receipt (Apple: the Order ID in the receipt email; Google Play: the order number starting with
+      GPA.), so that we can find your data. We may ask one question to check that the request is yours. You can
+      change your nickname and avatar yourself at any time in Settings &rarr; Your name.</p>
+
+      <h2>16. Children</h2>
+      <p>The Game is not directed to children under 13, and we do not knowingly collect personal information from
+      them. If you believe a child under 13 has used the Game, email us and we will delete the data. Some
+      countries set a higher age (up to 16) for agreeing to personalised ads; if you are under that age, ask a
+      parent before you agree, or simply choose not to.</p>
+
+      <h2>17. Security</h2>
+      <p>Everything sent between the Game and our server is encrypted (HTTPS). The database is closed to direct
+      access: only our server functions can read or write it, and only we can manage the project. No system is
+      perfectly secure, but we work to protect your information.</p>
+
+      <h2>18. Changes to this policy</h2>
+      <p>If this policy changes, the new version will be posted at this address with a new "Last updated"
+      date. If a change is significant, we will also tell you in the Game before it takes effect.</p>
+
+      <h2>19. Contact</h2>
+      <p>DoublePixel (Bar Sagiv; ArcLogic Studio on Google Play) ·
+      <a href="mailto:barsagivv@gmail.com">barsagivv@gmail.com</a></p>
+
+      <div class="foot">© 2026 DoublePixel · <a href="./">Lure Line</a> · <a href="terms.html">Terms of Use</a> ·
+      <a href="delete-account.html">Delete your data</a> · <a href="../">Studio home</a></div>
+    </div>
+  </div>
+
+  <div class="card" id="he" lang="he" dir="rtl">
+    <div class="hero">
+      <h1>מדיניות פרטיות</h1>
+      <div class="sub">Lure Line · DoublePixel · עודכן לאחרונה ב-13 באוקטובר 2026</div>
+      <div class="switch"><a href="#en">English ↑</a></div>
+    </div>
+    <div class="body">
+      <p>המדיניות הזאת מסבירה באיזה מידע משתמש המשחק הנייד <strong>Lure Line</strong> (בחנויות:
+      "<bdi>Lure Line: Fishing Puzzle</bdi>", "המשחק"), למה, ומה אפשר לעשות לגביו. את המשחק יוצר ומפרסם
+      בר שגיב, מפתח עצמאי בישראל, תחת שם הסטודיו <strong>DoublePixel</strong> ("אנחנו"). ב-Google Play המפתח
+      מופיע בשם <strong><bdi>ArcLogic Studio</bdi></strong>, וב-App Store המוכר הוא <strong><bdi>Bar
+      Sagiv</bdi></strong>: שלושת השמות הם אותו מפרסם. בר שגיב הוא האחראי על המידע הזה (בעל השליטה במידע לפי
+      דיני הגנת הפרטיות). לשאלות: <a href="mailto:barsagivv@gmail.com">barsagivv@gmail.com</a>.</p>
+
+      <div class="note">
+        <strong>בקצרה</strong>
+        <ul>
+          <li>אין הרשמה, אימייל, סיסמה או שם אמיתי. המשחק נותן לכם מזהה חשבון אקראי.</li>
+          <li>ההתקדמות שלכם נשמרת בטלפון, ועותק גיבוי שלה נשמר בשרת שלנו.</li>
+          <li>בליגות, בדרבי ובטבלאות המובילים מוצגים רק כינוי שמורכב ממילים קבועות ואווטאר מצויר. אין צ'אט
+          ואין טקסט חופשי.</li>
+          <li>הפרסומות מגיעות מ-Google AdMob. באירופה, בבריטניה ובשווייץ הן מותאמות אישית רק אם הסכמתם; בשאר
+          העולם אפשר לכבות פרסומות מותאמות אישית (סעיף 5).</li>
+          <li>התשלומים עוברים דרך Apple או Google. אנחנו אף פעם לא רואים את הכרטיס שלכם.</li>
+          <li>אפשר למחוק את הנתונים שלכם בכל עת בהגדרות &larr; מחיקת הנתונים שלי (סעיף 14 מפרט מה
+          נשאר).</li>
+        </ul>
+      </div>
+
+      <h2>1. בטלפון שלכם</h2>
+      <p>המשחק שומר את ההתקדמות שלכם בטלפון: שלבים, דגים שתפסתם, האקווריום, הרצף, מטבעות, פנינים ויהלומים,
+      פריטים שהרווחתם או קניתם, הכינוי והאווטאר, נתוני משחק (אגמים שנפתרו, זמנים, רמזים), רישום של הרכישות
+      שלכם בחנות (מה קניתם, מזהי העסקאות של החנות והסכום הכולל ששילמתם), מונים של הפרסומות שצפיתם בהן,
+      וההגדרות (צלילים, מוזיקה, רטט, שפה, גרפיקה, מצב רגוע, סמלים לעיוורון צבעים, שעת התזכורת). הוא גם יוצר
+      מזהה אקראי לעותק הזה של המשחק. מחיקת המשחק מהטלפון מוחקת את המידע הזה מהטלפון, אבל לא את הגיבוי בשרת
+      שלנו (ראו סעיף 14). אם הטלפון שלכם מגבה אפליקציות (גיבוי של אנדרואיד לחשבון Google, או גיבוי של אייפון
+      ל-iCloud או למחשב), הגיבוי עשוי להכיל עותק של המידע הזה, לפי הגדרות הגיבוי של הטלפון.</p>
+
+      <h2>2. חשבון המשחק שלכם</h2>
+      <p>אין התחברות. כשהמשחק מתחבר לרשת בפעם הראשונה, הוא נכנס באופן אנונימי באמצעות
+      <strong>Firebase Authentication</strong> של Google, שיוצר מזהה חשבון אקראי. החשבון הזה לא מקושר לשם
+      שלכם, לכתובת האימייל או למספר הטלפון. אנחנו אף פעם לא רואים את ה-Apple ID או את חשבון Google שלכם, אבל
+      אם תקנו משהו, רשומת הרכישה של החנות מקושרת למזהה החשבון (סעיף 6). Firebase שומר את מזהה החשבון ואת
+      מועדי היצירה והשימוש האחרון, ועשוי לעבד את כתובת ה-IP כדי להגן על שירות הכניסה. המשחק עובד במלואו גם
+      בלי אינטרנט; התכונות המקוונות פשוט מחכות עד שתהיו מחוברים.</p>
+
+      <h2>3. מה השרת שלנו שומר</h2>
+      <p>השרת שלנו הוא פרויקט Google Cloud / Firebase בארצות הברית (מסד נתונים Cloud Firestore באזור הרב-אזורי
+      "nam5" של ארה"ב, ופונקציות Cloud Functions באזור us-central1). המשחק לא יכול לקרוא או לכתוב ישירות במסד
+      הנתונים: כל בקשה עוברת דרך פונקציות השרת שלנו, שבודקות אותה קודם. בקישור למזהה החשבון האקראי, השרת
+      שומר:</p>
+      <ul>
+        <li><strong>גיבוי בענן:</strong> עותק גיבוי של ההתקדמות במשחק (אותו מידע שבטלפון), שנשלח לכל היותר פעם
+        בדקה בזמן המשחק.</li>
+        <li><strong>כינוי ואווטאר:</strong> הכינוי הוא שם תואר, דג ומספר, שנבחרים מרשימות קבועות של מילים
+        מאושרות מראש ומוצגים לכל שחקן בשפה שלו. עד שתבחרו כינוי, השרת יוצר אחד מתוך מזהה החשבון.
+        האווטאר הוא אחד הדיוקנאות שצוירו למשחק. אי אפשר להקליד שום טקסט.</li>
+        <li><strong>ליגה שבועית:</strong> הדרגה והקבוצה שלכם, הנקודות, זמן הפתרון הכולל ומספר האגמים שנספרו
+        באותו שבוע. השחקנים בקבוצה שלכם (עד 30) רואים את הכינוי, האווטאר, הנקודות והמקום שלכם.</li>
+        <li><strong>דרבי סוף השבוע:</strong> הזמן שלכם בכל אחד מחמשת אגמי הדרבי, והאם הפתרון היה מושלם. הקבוצה
+        שלכם רואה את הכינוי, האווטאר, הנקודות והמקום.</li>
+        <li><strong>טבלאות מובילים עולמיות</strong> (טייקונים, ממזגים, דייגים): התוצאות הטובות ביותר שלכם בכל
+        הזמנים ובשבוע הנוכחי, עם הכינוי והאווטאר. כל שחקן יכול לראות את 100 הראשונים ואת המקום שלו.</li>
+        <li><strong>תוצאות האגם היומי:</strong> הזמן ומספר הרמזים שלכם באגם היומי, כדי להראות איך אתם ביחס
+        לכולם (למשל "מהירים מ-70% מהשחקנים"). הן נשמרות 5 ימים ואז נמחקות אוטומטית, בדרך כלל תוך יום
+        נוסף.</li>
+        <li><strong>סטטיסטיקה של אגמים:</strong> כשאתם פותרים אגם, הזמן והרמזים שלכם מתווספים לסיכומים של
+        אותו אגם (כמה שחקנים פתרו אותו, באיזו מהירות, כמה בלי רמז). הסיכומים לא כוללים את המזהה שלכם.
+        ברשומה שלכם נשמר רק שהאגם כבר נספר, כדי שייספר פעם אחת.</li>
+        <li><strong>בדיקות משחק הוגן:</strong> לפני שתוצאה נספרת, השרת משחזר את האגם לפי חוקי המשחק עצמו (הקו
+        שציירתם, הזמן והרמזים). הוא שומר כמה אגמים ודגים אומתו עבורכם, כדי לבדוק את התוצאות שלכם בטבלאות,
+        ואת מועדי היצירה והשימוש האחרון ברשומה שלכם.</li>
+        <li><strong>תיבת הפרסים:</strong> פרסי ליגה ודרבי שמחכים לכם, והאם אספתם אותם.</li>
+        <li><strong>יומנים טכניים:</strong> Google Cloud רושמת בקשות לשרת שלנו. הן יכולות לכלול את מזהה החשבון,
+        את כתובת ה-IP, ובתוצאה שנדחתה גם את הסיבה. הן נשמרות לזמן מוגבל, בדרך כלל כ-30 יום.</li>
+      </ul>
+      <p>אין צ'אט, אין טקסט חופשי, אין תוכן שמשתמשים יוצרים ואין רשימת חברים, והמשחק לא קורא את אנשי הקשר,
+      התמונות או המיקום המדויק שלכם.</p>
+      <p>אם תכתבו לנו באימייל, נקבל את כתובת האימייל ואת ההודעה שלכם (סעיף 13 מפרט כמה זמן אנחנו שומרים
+      אותן).</p>
+
+      <h2>4. בדיקה שהאפליקציה מקורית</h2>
+      <p>השרת שלנו בודק כל תוצאה בעצמו לפני שהיא נספרת (סעיף 3). המשחק לא משתמש היום בבדיקות תקינות של
+      המכשיר. אם נוסיף אותן (למשל Google Play Integrity או Apple App Attest, דרך Firebase App Check), נעדכן
+      קודם את המדיניות הזאת.</p>
+
+      <h2>5. פרסומות</h2>
+      <p>המשחק חינמי ומציג פרסומות של <strong>Google AdMob</strong>:</p>
+      <ul>
+        <li>סרטוני תגמול שאתם בוחרים לצפות בהם בשביל משהו במשחק, כמו רמז, מטבעות כפולים, הקפאת רצף או תיקון
+        רצף, או בונוס באקווריום. הכפתור תמיד אומר מה הסרטון נותן;</li>
+        <li>פרסומות במסך מלא בין שלבים, רק אחרי השלבים הראשונים, אף פעם לא בפעם הראשונה שאתם פותחים את המשחק,
+        ואף פעם לא אחרי האגם היומי, הדרבי או האירוע החודשי. הסרת פרסומות ומועדון הדייגים מבטלים אותן.</li>
+      </ul>
+      <p>התדירות של פרסומות במסך מלא נקבעת בטלפון שלכם, לפי ההתקדמות, הפעמים ששיחקתם והאם קניתם משהו (שחקנים
+      שקנו משהו רואים פחות פרסומות כאלה, או בכלל לא).</p>
+      <p>AdMob עשויה לאסוף: את מזהה הפרסום של המכשיר (Advertising ID באנדרואיד; באייפון את ה-IDFA, רק אם
+      אישרתם מעקב) ומזהי מכשיר נוספים; את כתובת ה-IP והמיקום המשוער שעולה ממנה (לא GPS); מידע על המכשיר
+      והאפליקציה (דגם, מערכת הפעלה, שפה, גרסת האפליקציה); ואילו פרסומות הוצגו, נצפו ונלחצו, עם נתוני אבחון.
+      Google משתמשת בזה כדי להציג ולמדוד פרסומות, להגביל חזרות, למנוע הונאות, ואם הסכמתם, גם כדי להתאים
+      פרסומות אישית.</p>
+      <ul>
+        <li><strong>אירופה, בריטניה ושווייץ:</strong> לפני שהמשחק טוען את הפרסומת הראשונה, הוא מציג את הודעת
+        ההסכמה של Google. הפרסומות מותאמות אישית רק אם הסכמתם. אם אי אפשר להשלים את בדיקת ההסכמה, המשחק
+        מציג רק פרסומות לא מותאמות אישית.</li>
+        <li><strong>מדינות בארה"ב עם חוקי פרטיות:</strong> אפשר לבטל פרסומות מותאמות אישית (ממוקדות).</li>
+        <li><strong>בכל שאר המקומות:</strong> הפרסומות עשויות להיות מותאמות אישית, אלא אם תכבו זאת: באנדרואיד
+        בהגדרות &larr; Google &larr; מודעות (מחיקה או איפוס של מזהה הפרסום), ובאייפון כשלא מאשרים מעקב.</li>
+        <li>אפשר לשנות את הבחירה בכל עת בהגדרות &larr; <strong>הגדרות פרטיות לפרסומות</strong> (מוצג איפה שזה
+        רלוונטי).</li>
+        <li><strong>אייפון:</strong> המשחק מבקש רשות למעקב (App Tracking Transparency). אם תסרבו, ה-IDFA לא
+        נמסר והמשחק עובד בדיוק אותו דבר.</li>
+        <li>הפרסומות מוגבלות לדירוג התוכן "Teen" של Google או לדירוג מתון ממנו.</li>
+      </ul>
+
+      <h2>6. רכישות</h2>
+      <p>הרכישות הן רשות: הסרת פרסומות, חבילות פנינים, חבילת הפתיחה, הקפאות רצף ותיקון רצף, ומנוי מועדון
+      הדייגים. את התשלום מעבדות <strong>Apple App Store</strong> או <strong>Google Play</strong>; אנחנו אף
+      פעם לא רואים את פרטי הכרטיס או התשלום. הרכישות מנוהלות באמצעות <strong>RevenueCat</strong>. RevenueCat
+      מקבלת מהחנות את רשומת הרכישה (מוצר, מחיר, מטבע, תאריך, מדינת החנות, מזהה עסקה ומצב המנוי), את מזהה
+      חשבון המשחק שלכם (לפני שהמשחק מתחבר לרשת בפעם הראשונה, מזהה אקראי במקומו), את המזהה האקראי של העותק
+      הזה של המשחק, ואם האנליטיקה פעילה, גם את מזהה המופע שלו ב-Google Analytics (סעיף 7), ומידע בסיסי על
+      המכשיר והאפליקציה (מערכת הפעלה, גרסת האפליקציה) יחד עם כתובת ה-IP. RevenueCat שולחת אירועי רכישה לשרת
+      שלנו, ששומר אותם בקישור למזהה חשבון המשחק, ואם האנליטיקה פעילה, גם ל-Google Analytics. אנחנו משתמשים
+      בזה כדי לתת לכם את מה שקניתם, לשחזר אותו, לטפל בהחזרים ולספור מכירות.</p>
+      <p>אילו הצעות החנות מציגה לכם נקבע בטלפון שלכם, לפי ההתקדמות, הפעמים ששיחקתם והאם קניתם משהו. לבחירות
+      האלה, ולתדירות הפרסומות (סעיף 5), אין השפעה משפטית או השפעה משמעותית דומה עליכם.</p>
+
+      <h2>7. אנליטיקה</h2>
+      <p>המשחק משתמש ב-<strong>Google Analytics for Firebase</strong> כדי להבין בצורה מצרפית איך משחקים
+      בו: למשל לאילו שלבים שחקנים מגיעים, איפה הם מפסיקים, איך משתמשים ברמזים, בפרסומות ובחנות, ואילו שגיאות
+      חיבור קורות. אירועי המשחק האלה נרשמים עם מזהה מופע של האפליקציה, דגם המכשיר, מערכת ההפעלה, השפה
+      והמדינה המשוערת. הם לא מקושרים לזהות האמיתית שלכם, ואנחנו לא מנסים לזהות שחקנים בודדים. באירופה,
+      בבריטניה ובשווייץ האנליטיקה כבויה עד שתסכימו בהודעת ההסכמה של Google (סעיף 5), ואפשר לשנות את הבחירה
+      בהגדרות &larr; הגדרות פרטיות לפרסומות. Google Analytics שומרת את האירועים הבודדים חודשיים; אחר כך
+      נשארים רק דוחות מצרפיים.</p>
+      <p>המשחק גם מוריד את ההגדרות שלו מ-<strong>Firebase Remote Config</strong>, באמצעות מזהה התקנה של
+      Firebase, השפה של המכשיר וכתובת ה-IP (ממנה Google מסיקה מדינה משוערת). זה לא מקושר לחשבון המשחק שלכם.
+      לפעמים אנחנו בודקים שתי גרסאות של הגדרה (למשל באיזו תדירות מופיעות פרסומות או אילו הצעות מוצגות),
+      וייתכן שתשובצו בקבוצת בדיקה באקראי.</p>
+
+      <h2>8. תזכורות</h2>
+      <p>התזכורות היומיות כבויות עד שתפעילו אותן. המשחק מציע אותן אחרי האגם היומי הראשון שלכם, ואפשר לקבוע
+      אותן בהגדרות &larr; <strong>תזכורת יומית</strong> (בוקר, צהריים, ערב או כבוי). תקבלו לכל היותר תזכורת אחת
+      ביום: "האגם של היום מוכן" בשעה שבחרתם, או, כשיש לכם רצף של יומיים לפחות ועוד לא שיחקתם באותו יום,
+      "הרצף שלכם נגמר הלילה" בשעה 22:00. אם התחלתם תקופת ניסיון חינם במועדון הדייגים, המשחק עשוי גם להזכיר
+      לכם יומיים לפני שהיא מסתיימת; התזכורת הזאת נכללת במגבלה של אחת ביום. התזכורות מתוזמנות בטלפון עצמו:
+      אין שרת ואין אסימון התראות (push). אפשר לכבות אותן באותה הגדרה או בהגדרות ההתראות של הטלפון.</p>
+
+      <h2>9. שיתוף תפיסה</h2>
+      <p>כשאתם משתפים כרטיס תפיסה, המשחק יוצר את התמונה בטלפון ומעביר אותה לתפריט השיתוף של הטלפון; היא מגיעה
+      רק לאן שתשלחו אותה. באייפון, שמירת כרטיס בתמונות מבקשת קודם את רשותכם (הוספה בלבד). אנחנו לא מקבלים
+      את התמונה.</p>
+
+      <h2>10. למה אנחנו משתמשים במידע (בסיס חוקי)</h2>
+      <ul>
+        <li>להפעלת המשחק והתכונות המקוונות (גיבוי בענן, ליגות, דרבי, טבלאות מובילים, פרסים): זה נדרש כדי לספק
+        לכם את המשחק שביקשתם (ההסכם בינינו, <a href="terms.html#he">תנאי השימוש</a>).</li>
+        <li>לשמירה על תחרות הוגנת ועל אבטחת השירות (בדיקת תוצאות, מגבלות, יומנים): האינטרס הלגיטימי שלנו
+        במשחק הוגן ובהגנה על המשחק.</li>
+        <li>להצגת הפרסומות שמשאירות את המשחק חינמי: באירופה, בבריטניה ובשווייץ, ההסכמה שלכם בהודעה של Google
+        לשמירה ולקריאה של מידע במכשיר, ואם תבחרו, גם להתאמה אישית של פרסומות; בלי הסכמה, Google עשויה עדיין
+        להציג פרסומות מוגבלות שלא משתמשות במידע הזה. אם ההודעה לא נטענת, המשחק מבקש רק פרסומות לא מותאמות
+        אישית, על בסיס האינטרס הלגיטימי שלנו לשמור על המשחק חינמי. בשאר העולם: האינטרס הלגיטימי שלנו, ואפשר
+        לבטל פרסומות מותאמות אישית (סעיף 5).</li>
+        <li>לטיפול ברכישות: ההסכם בינינו, וחובות לפי חוק כמו הנהלת חשבונות ומס.</li>
+        <li>לשיפור המשחק באמצעות אנליטיקה: באירופה, בבריטניה ובשווייץ, ההסכמה שלכם; בשאר העולם, האינטרס
+        הלגיטימי שלנו.</li>
+        <li>לקביעה ולבדיקה של הגדרות המשחק, ולבחירת ההצעות ותדירות הפרסומות: האינטרס הלגיטימי שלנו לשמור על
+        משחק חינמי, הוגן ומהנה.</li>
+        <li>תזכורות: רק כשאתם בוחרים בהן.</li>
+        <li>למענה לאימיילים ולבקשות שלכם: האינטרס הלגיטימי שלנו לעזור לכם, והחובות שלנו לפי חוק בבקשות לגבי
+        המידע שלכם.</li>
+      </ul>
+      <p>אנחנו לא מוכרים את המידע האישי שלכם תמורת כסף.</p>
+      <p>אין עליכם חובה לפי חוק למסור לנו מידע כלשהו. המשחק צריך את המידע המקוון שבסעיף 3 בשביל התכונות
+      המקוונות; בלי חיבור, או אחרי מחיקת הנתונים, אפשר עדיין לפתור את החידות בטלפון.</p>
+
+      <h2>11. מי מקבל את המידע</h2>
+      <p>אנחנו משתפים מידע רק עם השירותים שמפעילים את המשחק עבורנו: Google (Firebase Authentication,
+      Cloud Firestore, Cloud Functions, Firebase Remote Config, Google Analytics for Firebase, AdMob, Google
+      Play), Apple (App Store, App Tracking Transparency) ו-RevenueCat. השירותים האלה מחויבים להגן על המידע
+      ברמה זהה או שווה לזו שמתוארת במדיניות הזאת. שחקנים אחרים רואים רק את הכינוי, האווטאר, התוצאות והמקומות
+      שלכם. ייתכן שנמסור מידע גם כשהחוק מחייב. המדיניות שלהם:</p>
+      <ul>
+        <li><a href="https://policies.google.com/privacy">מדיניות הפרטיות של Google</a></li>
+        <li><a href="https://policies.google.com/technologies/partner-sites">איך Google משתמשת במידע מאפליקציות שמשתמשות בשירותים שלה</a></li>
+        <li><a href="https://firebase.google.com/support/privacy">פרטיות ואבטחה ב-Firebase</a></li>
+        <li><a href="https://www.apple.com/legal/privacy/">מדיניות הפרטיות של Apple</a></li>
+        <li><a href="https://www.revenuecat.com/privacy">מדיניות הפרטיות של RevenueCat</a></li>
+      </ul>
+
+      <h2>12. איפה המידע נשמר</h2>
+      <p>המידע בשרת שלנו נשמר בארצות הברית. Google, Apple ו-RevenueCat עשויות לעבד מידע גם במדינות אחרות.
+      אנחנו מפעילים את המשחק מישראל, שהנציבות האירופית מכירה בה כמדינה שמעניקה הגנה נאותה למידע אישי.
+      Google LLC מוסמכת במסגרת EU-U.S. Data Privacy Framework (כולל ההרחבות לבריטניה ולשווייץ), ו-Google
+      ו-RevenueCat מגנות על מידע מהאזור הכלכלי האירופי, מבריטניה ומשווייץ באמצעות הסעיפים החוזיים התקניים
+      (SCC) של הנציבות האירופית שבתנאי עיבוד הנתונים שלהן. מידע של שחקנים בישראל מועבר לחו"ל לפי התחייבויות
+      בכתב של הספקים האלה להגנה על המידע. אפשר לבקש מאיתנו עותק של אמצעי ההגנה האלה.</p>
+
+      <h2>13. כמה זמן אנחנו שומרים</h2>
+      <ul>
+        <li>בטלפון: עד שתמחקו (מחיקת הנתונים שלי, או מחיקת המשחק מהטלפון).</li>
+        <li>גיבוי בענן, כינוי ואווטאר, רשומות ליגה ודרבי, רשומות בטבלאות המובילים, תיבת הפרסים ורשומות המשחק
+        ההוגן: כל עוד החשבון קיים. מחיקת הנתונים שלי מוחקת אותם.</li>
+        <li>תוצאות האגם היומי: 5 ימים, ואז הן נמחקות אוטומטית, בדרך כלל תוך יום נוסף.</li>
+        <li>סטטיסטיקה של אגמים: נשמרת רק כסיכומים אנונימיים.</li>
+        <li>יומנים טכניים: בדרך כלל כ-30 יום.</li>
+        <li>רשומות רכישה: Apple ו-Google שומרות את שלהן לפי הכללים שלהן. רשומת הלקוח שלכם ב-RevenueCat ואירועי
+        הרכישה בשרת שלנו נשמרים כל עוד החשבון קיים, ומחיקת הנתונים שלי מוחקת אותם. דוחות המכירות שהחנויות
+        שולחות לנו, שלא מציינים את חשבון המשחק שלכם, נשמרים כל עוד חוקי הנהלת החשבונות והמס מחייבים.</li>
+        <li>אירועי אנליטיקה: חודשיים; אחר כך נשארים רק דוחות מצרפיים.</li>
+        <li>מידע פרסומי ש-Google מחזיקה: לפי כללי השמירה של Google.</li>
+        <li>אימיילים אלינו: כל עוד צריך כדי לענות לכם; בבקשות לגבי המידע שלכם, שנתיים, כתיעוד שטיפלנו
+        בהן.</li>
+      </ul>
+
+      <h2>14. מחיקת המידע</h2>
+      <p>במשחק: <strong>הגדרות &larr; מחיקת הנתונים שלי &larr; למחוק הכול</strong>. השרת שלנו מוחק את הגיבוי
+      בענן, את רשומות הליגה והדרבי מכל השבועות, את הרשומות שלכם בטבלאות המובילים, את תוצאות האגם היומי מהימים
+      האחרונים, את רשומת השחקן (כינוי, אווטאר, תיבת הפרסים, רשומות המשחק ההוגן), את רשומת הלקוח שלכם
+      ב-RevenueCat, את אירועי הרכישה בשרת שלנו ואת חשבון המשחק. אחרי שהשרת מאשר, המשחק מוחק את המידע בטלפון
+      ומתחיל מחדש כשחקן חדש.</p>
+      <p>הגיבוי בענן מוחלף קודם בסימון ריק "נמחק", כדי שעותק שעוד בדרך לא יוכל להחזיר את ההתקדמות. הסימון לא
+      מכיל מידע מהמשחק, והוא נמחק אוטומטית תוך 3 ימים. יומנים טכניים נמחקים תוך כ-30 יום, והגיבויים של Google
+      תוך כחצי שנה. הסיכומים של האגמים נשארים, כי הם לא מזהים אתכם. Apple ו-Google שומרות את רשומות הרכישה
+      שלהן, ולכן הגדרות &larr; שחזור רכישות, באותו חשבון Apple או Google, עדיין מחזיר את הסרת הפרסומות, את
+      הסירה מחבילת הפתיחה ומנוי פעיל במועדון הדייגים (ואז RevenueCat יוצרת רשומה חדשה מהקבלה של החנות).
+      מחיקת המידע לא מבטלת מנוי.</p>
+      <p>בלי האפליקציה: ראו את הדף <a href="delete-account.html#he">מחיקת החשבון והנתונים</a>, או כתבו לנו.</p>
+
+      <h2>15. הזכויות שלכם</h2>
+      <p>בכל מקום שבו אתם גרים, כולל ישראל, אפשר לבקש מאיתנו לעיין במידע שלכם, לתקן אותו או למחוק אותו.
+      בישראל אפשר גם להגיש תלונה לרשות להגנת הפרטיות.</p>
+      <p>לפי ה-GDPR וה-GDPR הבריטי אפשר גם לבקש להגביל את השימוש במידע או להתנגד לו (כולל שימוש שמבוסס על
+      האינטרס הלגיטימי שלנו), ולקבל עותק בפורמט נייד. אפשר לבטל הסכמה בכל עת: הגדרות &larr; הגדרות פרטיות
+      לפרסומות לגבי פרסומות ואנליטיקה, הגדרת המעקב באייפון (הגדרות &larr; פרטיות ואבטחה &larr; מעקב), והגדרות &larr;
+      תזכורת יומית. אפשר גם להגיש תלונה לרשות להגנת המידע במדינה שלכם.</p>
+      <p>לפי חוקי הפרטיות של מדינות בארה"ב (כמו קליפורניה) אפשר לבקש לדעת איזה מידע אנחנו מחזיקים, לקבל עותק,
+      לתקן או למחוק אותו, ולבטל פרסום ממוקד, שחלק מהחוקים האלה קוראים לו "מכירה" או "שיתוף" של מידע אישי.
+      השתמשו בהגדרות פרטיות לפרסומות במשחק או בהגדרות הפרסום של הטלפון (אנדרואיד: הגדרות &larr; Google &larr;
+      מודעות; אייפון: הגדרות &larr; פרטיות ואבטחה &larr; מעקב). לא נתייחס אליכם אחרת בגלל שהשתמשתם בזכויות
+      האלה.</p>
+      <p>לקליפורניה ולמדינות אחרות בארה"ב: אנחנו אוספים מזהים (מזהה חשבון המשחק, המזהה של העותק הזה של המשחק,
+      מזהי מכשיר ופרסום, כתובת IP), מידע מסחרי (היסטוריית רכישות), פעילות באינטרנט או ברשת אלקטרונית אחרת
+      (אירועי משחק, פרסומות שהוצגו ולחיצות עליהן) ומיקום משוער (מכתובת ה-IP). אנחנו אוספים אותם מכם, מהמכשיר,
+      מ-Apple, מ-Google ומ-RevenueCat, משתמשים בהם למטרות שבסעיף 10 ומוסרים אותם לשירותים שבסעיף 11. אנחנו
+      לא אוספים מידע אישי רגיש. אנחנו לא מוכרים מידע אישי תמורת כסף, אבל השימוש של Google במזהים ובפעילות
+      הפרסומית לפרסומות מותאמות אישית עשוי להיחשב "מכירה" או "שיתוף"; אפשר לבטל זאת כמתואר למעלה. אנחנו לא
+      מוכרים או משתפים ביודעין מידע אישי של מי שמתחת לגיל 16. אפשר להגיש בקשה דרך נציג מורשה; ייתכן שנבקש
+      מהנציג הוכחה ומכם אישור.</p>
+      <p>כדי להגיש בקשה, כתבו ל-<a href="mailto:barsagivv@gmail.com">barsagivv@gmail.com</a>. נענה תוך 30 יום.
+      כיוון שאין התחברות, ציינו את שם השחקן והאווטאר שלכם (הגדרות &larr; השם שלי), בערך מתי התחלתם לשחק ואיזה
+      שלב הגעתם, ואם קניתם משהו, את מספר ההזמנה מהקבלה של החנות (Apple: ה-Order ID באימייל הקבלה; Google Play:
+      מספר ההזמנה שמתחיל ב-<bdi>GPA.</bdi>), כדי שנוכל למצוא את המידע. ייתכן שנשאל שאלה אחת כדי לוודא שהבקשה
+      באמת שלכם. את הכינוי והאווטאר אפשר לשנות בעצמכם בכל עת בהגדרות &larr; השם שלי.</p>
+
+      <h2>16. ילדים</h2>
+      <p>המשחק לא מיועד לילדים מתחת לגיל 13, ואנחנו לא אוספים ביודעין מידע אישי מילדים כאלה. אם אתם חושבים
+      שילד מתחת לגיל 13 השתמש במשחק, כתבו לנו ונמחק את המידע. בחלק מהמדינות גיל ההסכמה לפרסומות מותאמות
+      אישית גבוה יותר (עד 16); אם אתם מתחת לגיל הזה, בקשו מהורה לפני שאתם מסכימים, או פשוט אל תסכימו.</p>
+
+      <h2>17. אבטחה</h2>
+      <p>כל מה שעובר בין המשחק לשרת שלנו מוצפן (HTTPS). מסד הנתונים סגור לגישה ישירה: רק פונקציות השרת שלנו
+      יכולות לקרוא ולכתוב בו, ורק אנחנו יכולים לנהל את הפרויקט. אף מערכת לא מאובטחת לגמרי, אבל אנחנו עושים
+      מאמץ להגן על המידע שלכם.</p>
+
+      <h2>18. שינויים במדיניות</h2>
+      <p>אם המדיניות תשתנה, הגרסה החדשה תפורסם בכתובת הזאת עם תאריך "עודכן לאחרונה" חדש. אם השינוי מהותי,
+      נודיע עליו גם במשחק לפני שהוא נכנס לתוקף.</p>
+
+      <h2>19. יצירת קשר</h2>
+      <p>DoublePixel (בר שגיב; <bdi>ArcLogic Studio</bdi> ב-Google Play) ·
+      <a href="mailto:barsagivv@gmail.com">barsagivv@gmail.com</a></p>
+
+      <div class="foot">© 2026 DoublePixel · <a href="./#he">Lure Line</a> · <a href="terms.html#he">תנאי שימוש</a> ·
+      <a href="delete-account.html#he">מחיקת הנתונים</a> · <a href="../">דף הסטודיו</a></div>
+    </div>
+  </div>
+</body>
+</html>
