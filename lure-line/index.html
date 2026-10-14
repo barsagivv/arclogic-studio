@@ -32,8 +32,54 @@
   a{color:var(--link);text-decoration:none}
   a:hover{text-decoration:underline}
   .foot{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+  /* Get the game: a button per store, "Coming soon" until LIVE (the script below) says its store page is public */
+  .get .invited{display:none;margin:0 0 4px;font-weight:600;color:var(--ink)}
+  .get.from-invite .invited{display:block}
+  .stores{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:12px 0 0}
+  .store{position:relative;display:flex;flex-direction:column;justify-content:center;min-height:66px;padding:10px 16px;
+         border-radius:14px;border:2px solid transparent;background:linear-gradient(135deg,var(--sea),var(--sea2));
+         color:var(--cream);line-height:1.25}
+  .store .pre{font-size:13px;color:var(--sand)}
+  .store b{font-size:21px;letter-spacing:.2px}
+  .store:hover{text-decoration:none;border-color:var(--sand)}
+  .store.soon{background:#EFE6D3;color:var(--muted);cursor:default}
+  .store.soon .pre{color:var(--muted)}
+  .store.soon:hover{border-color:transparent}
+  .store .you{display:none;position:absolute;top:8px;inset-inline-end:10px;font-size:11px;font-weight:700;
+              padding:1px 8px;border-radius:99px;background:var(--sand);color:var(--ink)}
+  .store.mine{border-color:var(--sand2);box-shadow:0 0 0 4px rgba(201,154,82,.28)}
+  .store.mine .you{display:block}
   @media (max-width:560px){body{padding:20px 16px}.hero{padding:28px 22px 24px}.hero h1{font-size:26px}.body{padding:20px 22px 26px}}
 </style>
+<script>
+  // Store switches: set each to true the day its store page is public. The game flips Remote Config
+  // store_live_ios / store_live_android at the same time (lure-line/HANDOFF.md, "Launch checklist").
+  var LIVE = { ios: false, android: false };
+  var STORES = {
+    ios: 'https://apps.apple.com/app/id6822671567',
+    android: 'https://play.google.com/store/apps/details?id=com.barsagiv.lureline'
+  };
+  var UA = navigator.userAgent || '';
+  var PLATFORM = /Android/i.test(UA) ? 'android'
+    : (/iPhone|iPad|iPod/.test(UA) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) ? 'ios' : null;
+  var FROM_INVITE = new URLSearchParams(location.search).get('from') === 'invite';
+  // an invitation from the game goes straight on to the visitor's store once the game is live there
+  if (FROM_INVITE && PLATFORM && LIVE[PLATFORM]) location.replace(STORES[PLATFORM]);
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.store').forEach(function (a) {
+      var p = a.getAttribute('data-store');
+      a.querySelector('.pre').textContent = a.getAttribute(LIVE[p] ? 'data-live' : 'data-soon');
+      if (LIVE[p]) {
+        a.href = STORES[p];
+        a.classList.remove('soon');
+        a.removeAttribute('aria-disabled');
+      }
+      // the visitor's own platform stands out
+      if (p === PLATFORM) a.classList.add('mine');
+    });
+    if (FROM_INVITE) document.querySelectorAll('.get').forEach(function (g) { g.classList.add('from-invite'); });
+  });
+</script>
 </head>
 <body>
   <div class="card" id="en" lang="en" dir="ltr">
@@ -46,6 +92,15 @@
       <div class="switch"><a href="#he">עברית ↓</a></div>
     </div>
     <div class="body">
+      <section class="get" aria-labelledby="get-en">
+        <h2 id="get-en">Get the game</h2>
+        <p class="invited">A friend invited you to play Lure Line!</p>
+        <div class="stores">
+          <a class="store soon" data-store="ios" aria-disabled="true" data-live="Download on the" data-soon="Coming soon to"><span class="pre">Coming soon to</span><b>App Store</b><span class="you">Your device</span></a>
+          <a class="store soon" data-store="android" aria-disabled="true" data-live="Get it on" data-soon="Coming soon to"><span class="pre">Coming soon to</span><b>Google Play</b><span class="you">Your device</span></a>
+        </div>
+      </section>
+
       <h2>How it plays</h2>
       <ul>
         <li>Every puzzle has exactly one solution and never needs a guess.</li>
@@ -91,7 +146,7 @@
       </div>
 
       <div class="foot">© 2026 DoublePixel (Bar Sagiv; ArcLogic Studio on Google Play) · Lure Line ·
-      <a href="mailto:barsagivv@gmail.com">barsagivv@gmail.com</a> · Last updated 13 October 2026</div>
+      <a href="mailto:barsagivv@gmail.com">barsagivv@gmail.com</a> · Last updated 14 October 2026</div>
     </div>
   </div>
 
@@ -104,6 +159,15 @@
       <div class="switch"><a href="#en">English ↑</a></div>
     </div>
     <div class="body">
+      <section class="get" aria-labelledby="get-he">
+        <h2 id="get-he">להורדת המשחק</h2>
+        <p class="invited">קיבלתם הזמנה לשחק ב-Lure Line!</p>
+        <div class="stores">
+          <a class="store soon" data-store="ios" aria-disabled="true" data-live="להורדה מ-" data-soon="בקרוב ב-"><span class="pre">בקרוב ב-</span><b><bdi>App Store</bdi></b><span class="you">המכשיר שלכם</span></a>
+          <a class="store soon" data-store="android" aria-disabled="true" data-live="להורדה מ-" data-soon="בקרוב ב-"><span class="pre">בקרוב ב-</span><b><bdi>Google Play</bdi></b><span class="you">המכשיר שלכם</span></a>
+        </div>
+      </section>
+
       <h2>איך משחקים</h2>
       <ul>
         <li>לכל חידה יש פתרון אחד בדיוק, ואף פעם לא צריך לנחש.</li>
@@ -147,7 +211,7 @@
       </div>
 
       <div class="foot">© 2026 DoublePixel (בר שגיב; <bdi>ArcLogic Studio</bdi> ב-Google Play) · Lure Line ·
-      <a href="mailto:barsagivv@gmail.com">barsagivv@gmail.com</a> · עודכן לאחרונה ב-13 באוקטובר 2026</div>
+      <a href="mailto:barsagivv@gmail.com">barsagivv@gmail.com</a> · עודכן לאחרונה ב-14 באוקטובר 2026</div>
     </div>
   </div>
 </body>
