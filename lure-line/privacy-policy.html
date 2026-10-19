@@ -36,7 +36,7 @@
   <div class="card" id="en" lang="en" dir="ltr">
     <div class="hero">
       <h1>Privacy Policy</h1>
-      <div class="sub">Lure Line · DoublePixel · Last updated 13 October 2026</div>
+      <div class="sub">Lure Line · DoublePixel · Last updated 20 October 2026</div>
       <div class="switch"><a href="#he">עברית ↓</a></div>
     </div>
     <div class="body">
@@ -51,7 +51,8 @@
       <div class="note">
         <strong>In short</strong>
         <ul>
-          <li>No sign-up, email, password or real name. The Game gives you a random account id.</li>
+          <li>No sign-up, email, password or real name is needed. The Game gives you a random account id. Signing in
+          with Google or Apple is optional and only moves your progress to another phone (section 2).</li>
           <li>Your progress lives on your phone, with a backup copy on our server.</li>
           <li>Leagues, the derby and leaderboards show only a nickname made from fixed words and a drawn
           avatar. There is no chat and no free text.</li>
@@ -75,13 +76,22 @@
       settings.</p>
 
       <h2>2. Your game account</h2>
-      <p>There is no login. When the Game first goes online, it signs in anonymously with
+      <p>No login is needed. When the Game first goes online, it signs in anonymously with
       <strong>Firebase Authentication</strong> (Google), which creates a random account id. This account is not
-      linked to your name, email address or phone number. We never see your Apple ID or Google account, but if
-      you buy something, the store's purchase record is linked to your account id (section 6). Firebase keeps
-      the account id and when it was created and last used, and may process your IP address to protect the
-      sign-in service.
+      linked to your name, email address or phone number unless you connect it (below). We never see your
+      Apple ID or Google password. Firebase keeps the account id and when it was created and last used, and may
+      process your IP address to protect the sign-in service.
       The Game plays fully offline; the online features simply wait until you are connected.</p>
+      <p><strong>Signing in with Google or Apple (optional).</strong> In Settings &rarr; Save &amp; devices you can
+      connect your game account to your Google account (Android) or Apple account (iPhone, Sign in with Apple),
+      so that you can keep your progress and move it to a new phone. You choose the account in Google's or
+      Apple's own window. We then receive from Google or Apple your account's user id at that provider and, when
+      the provider shares them, your email address and name (Apple lets you hide your email address behind a
+      relay address). Firebase Authentication keeps them with your game account, and we use them only to sign
+      you in on another device and to bring your progress there; they are never shown to other players and never
+      used for ads or marketing. If the account you sign in with already holds progress, the Game asks you which
+      one to keep. The link stays until you delete your data (section 14), which deletes the account with its
+      link and, for an Apple sign-in, asks Apple to revoke the Game's access.</p>
 
       <h2>3. What our server stores</h2>
       <p>Our server is a Google Cloud / Firebase project in the United States (a Cloud Firestore database in the
@@ -163,14 +173,11 @@
       <h2>6. Purchases</h2>
       <p>Purchases are optional: Remove Ads, pearl packs, the Starter Pack, streak freezes and streak repair, and
       the Angler Club subscription. Payment is handled by the <strong>Apple App Store</strong> or
-      <strong>Google Play</strong>; we never see your card or payment details. Purchases are managed with
-      <strong>RevenueCat</strong>. RevenueCat receives from the store the purchase record (product, price,
-      currency, date, store country, transaction id and subscription status), your game account id (before the
-      Game first goes online, a random id instead), the random id of this copy of the Game and, where analytics
-      is on, its Google Analytics app instance id (section 7), and basic device and app information (operating
-      system, app version) with your IP address. RevenueCat sends purchase events to our server (which stores
-      them linked to your game account id) and, where analytics is on, to Google Analytics. We use this to give
-      you what you bought, restore it, handle refunds and count sales.</p>
+      <strong>Google Play</strong>; we never see your card or payment details. The Game talks to the store
+      directly (Google Play Billing, Apple StoreKit): the store tells the Game on your phone what you bought
+      (product, transaction id and subscription status), and the Game keeps that record on your phone and in your
+      cloud save (section 3). We use it to give you what you bought, restore it and handle refunds. No other
+      company handles your purchases. The stores send us sales reports that do not name your game account.</p>
       <p>Which offers the Shop shows you is decided on your phone, from your progress, your play sessions and
       whether you have bought something. These choices, and how often ads appear (section 5), have no legal or
       similarly significant effect on you.</p>
@@ -232,7 +239,7 @@
       <h2>11. Who receives it</h2>
       <p>We share information only with the services that run the Game for us: Google (Firebase Authentication,
       Cloud Firestore, Cloud Functions, Firebase Remote Config, Google Analytics for Firebase, AdMob, Google
-      Play), Apple (App Store, App Tracking Transparency) and RevenueCat. These services must protect it with the
+      Play, Google Sign-In) and Apple (App Store, App Tracking Transparency, Sign in with Apple). These services must protect it with the
       same or equal protection as this policy describes. Other players see only your nickname, avatar, scores and
       places. We may also disclose information when the law requires it. Their own policies:</p>
       <ul>
@@ -240,14 +247,13 @@
         <li><a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps that use its services</a></li>
         <li><a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a></li>
         <li><a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a></li>
-        <li><a href="https://www.revenuecat.com/privacy">RevenueCat Privacy Policy</a></li>
       </ul>
 
       <h2>12. Where it is stored</h2>
-      <p>Our server's data is stored in the United States. Google, Apple and RevenueCat may also process data in
+      <p>Our server's data is stored in the United States. Google and Apple may also process data in
       other countries. We run the Game from Israel, which the European Commission recognises as giving adequate
       protection to personal data. Google LLC is certified under the EU-U.S. Data Privacy Framework (with its UK
-      and Swiss extensions), and Google and RevenueCat protect data from the European Economic Area, the UK and
+      and Swiss extensions), and Google protects data from the European Economic Area, the UK and
       Switzerland with the European Commission's standard contractual clauses in their data processing terms.
       Data of players in Israel is transferred abroad under these providers' written data-protection
       commitments. You can ask us for a copy of these safeguards.</p>
@@ -260,10 +266,11 @@
         <li>Daily pond results: 5 days, then deleted automatically, normally within a day after that.</li>
         <li>Pond statistics: kept only as anonymous totals.</li>
         <li>Technical logs: normally about 30 days.</li>
-        <li>Purchase records: Apple and Google keep theirs under their own rules. Your customer record at
-        RevenueCat and the purchase events on our server are kept while your account exists, and Delete my data
-        deletes them. The stores' sales reports to us, which do not name your game account, are kept as long as
+        <li>Purchase records: Apple and Google keep theirs under their own rules. The record of your purchases in the Game is part of
+        your save (on your phone and in the cloud save) and goes with it. The stores' sales reports to us, which do not name your game account, are kept as long as
         accounting and tax law requires.</li>
+        <li>Google or Apple sign-in link (only if you connected it): while your account exists. Delete my data
+        removes it.</li>
         <li>Analytics events: 2 months; after that only aggregated reports remain.</li>
         <li>Ad data held by Google: under Google's own retention rules.</li>
         <li>Emails to us: as long as needed to answer you; for requests about your data, 2 years, as a record
@@ -273,15 +280,15 @@
       <h2>14. Deleting your data</h2>
       <p>In the Game: <strong>Settings &rarr; Delete my data &rarr; Delete everything</strong>. Our server deletes
       your cloud save, your league and derby entries for every week, your leaderboard entries, your recent daily
-      pond results, your player record (nickname, avatar, reward inbox, fair-play records), your customer record
-      at RevenueCat, the purchase events on our server and your game account. Once the server confirms, the Game
+      pond results, your player record (nickname, avatar, reward inbox, fair-play records), and your game account with its Google or Apple
+      sign-in link (for an Apple sign-in, the Game first asks Apple to revoke its access). Once the server confirms, the Game
       erases the data on your phone and starts again as a new player.</p>
       <p>Your cloud save is first replaced by an empty "deleted" marker, so that a copy still on its way cannot
       bring your progress back. The marker holds no game data and is removed automatically within 3 days.
       Technical logs are removed within about 30 days, and Google's backups within about 6 months. Pond totals
       stay, because they do not identify you. Apple and Google keep their own purchase records, so Settings
       &rarr; Restore purchases, on the same Apple or Google account, still brings back Remove Ads, the Starter
-      Pack's boat and an active Angler Club (RevenueCat then makes a new record from the store's receipt).
+      Pack's boat and an active Angler Club.
       Deleting your data does not cancel a subscription.</p>
       <p>Without the app: see <a href="delete-account.html">Delete your account and data</a>, or email us.</p>
 
@@ -300,15 +307,17 @@
       not treat you differently for using these rights.</p>
       <p>For California and other US states: we collect identifiers (your game account id, the id of this copy
       of the Game, device and advertising identifiers, IP address), commercial information (purchase history),
+      if you sign in with Google or Apple, your email address and name,
       internet or other electronic network activity (game events, ads shown and tapped) and approximate location
-      (from your IP address). We collect them from you, your device, Apple, Google and RevenueCat, use them for
+      (from your IP address). We collect them from you, your device, Apple and Google, use them for
       the purposes in section 10 and disclose them to the services in section 11. We do not collect sensitive
       personal information. We do not sell personal information for money, but Google's use of identifiers and
       ad activity for personalised ads may count as a "sale" or "sharing"; you can opt out as described above.
       We do not knowingly sell or share the personal information of anyone under 16. You can make a request
       through an authorised agent; we may ask the agent for proof and ask you to confirm.</p>
       <p>To make a request, email <a href="mailto:barsagivv@gmail.com">barsagivv@gmail.com</a>. We reply within
-      30 days. As there is no login, tell us your player name and avatar (Settings &rarr; Your name), roughly
+      30 days. If you signed in with Google or Apple, write from that email address
+      or tell us it; otherwise tell us your player name and avatar (Settings &rarr; Your name), roughly
       when you started and the level you reached, and, if you bought something, the order number from the
       store's receipt (Apple: the Order ID in the receipt email; Google Play: the order number starting with
       GPA.), so that we can find your data. We may ask one question to check that the request is yours. You can
@@ -341,7 +350,7 @@
   <div class="card" id="he" lang="he" dir="rtl">
     <div class="hero">
       <h1>מדיניות פרטיות</h1>
-      <div class="sub">Lure Line · DoublePixel · עודכן לאחרונה ב-13 באוקטובר 2026</div>
+      <div class="sub">Lure Line · DoublePixel · עודכן לאחרונה ב-20 באוקטובר 2026</div>
       <div class="switch"><a href="#en">English ↑</a></div>
     </div>
     <div class="body">
@@ -355,7 +364,8 @@
       <div class="note">
         <strong>בקצרה</strong>
         <ul>
-          <li>אין הרשמה, אימייל, סיסמה או שם אמיתי. המשחק נותן לכם מזהה חשבון אקראי.</li>
+          <li>לא צריך הרשמה, אימייל, סיסמה או שם אמיתי. המשחק נותן לכם מזהה חשבון אקראי. התחברות עם Google או
+          Apple היא רשות, ונועדה רק להעביר את ההתקדמות לטלפון אחר (סעיף 2).</li>
           <li>ההתקדמות שלכם נשמרת בטלפון, ועותק גיבוי שלה נשמר בשרת שלנו.</li>
           <li>בליגות, בדרבי ובטבלאות המובילים מוצגים רק כינוי שמורכב ממילים קבועות ואווטאר מצויר. אין צ'אט
           ואין טקסט חופשי.</li>
@@ -377,12 +387,21 @@
       ל-iCloud או למחשב), הגיבוי עשוי להכיל עותק של המידע הזה, לפי הגדרות הגיבוי של הטלפון.</p>
 
       <h2>2. חשבון המשחק שלכם</h2>
-      <p>אין התחברות. כשהמשחק מתחבר לרשת בפעם הראשונה, הוא נכנס באופן אנונימי באמצעות
+      <p>לא צריך להתחבר. כשהמשחק מתחבר לרשת בפעם הראשונה, הוא נכנס באופן אנונימי באמצעות
       <strong>Firebase Authentication</strong> של Google, שיוצר מזהה חשבון אקראי. החשבון הזה לא מקושר לשם
-      שלכם, לכתובת האימייל או למספר הטלפון. אנחנו אף פעם לא רואים את ה-Apple ID או את חשבון Google שלכם, אבל
-      אם תקנו משהו, רשומת הרכישה של החנות מקושרת למזהה החשבון (סעיף 6). Firebase שומר את מזהה החשבון ואת
-      מועדי היצירה והשימוש האחרון, ועשוי לעבד את כתובת ה-IP כדי להגן על שירות הכניסה. המשחק עובד במלואו גם
-      בלי אינטרנט; התכונות המקוונות פשוט מחכות עד שתהיו מחוברים.</p>
+      שלכם, לכתובת האימייל או למספר הטלפון, אלא אם תחברו אותו (ראו בהמשך). אנחנו אף פעם לא רואים את הסיסמה של
+      ה-Apple ID או של חשבון Google שלכם. Firebase שומר את מזהה החשבון ואת מועדי היצירה והשימוש האחרון, ועשוי
+      לעבד את כתובת ה-IP כדי להגן על שירות הכניסה. המשחק עובד במלואו גם בלי אינטרנט; התכונות המקוונות פשוט
+      מחכות עד שתהיו מחוברים.</p>
+      <p><strong>התחברות עם Google או Apple (רשות).</strong> בהגדרות &larr; שמירה ומכשירים אפשר לחבר את חשבון
+      המשחק לחשבון Google שלכם (באנדרואיד) או לחשבון Apple (באייפון, <bdi>Sign in with Apple</bdi>), כדי לשמור
+      את ההתקדמות ולהעביר אותה לטלפון חדש. את החשבון בוחרים בחלון של Google או של Apple עצמן. אז אנחנו מקבלים
+      מ-Google או מ-Apple את מזהה המשתמש שלכם אצלן, ואם הן משתפות אותם, גם את כתובת האימייל והשם (Apple מאפשרת
+      להסתיר את האימייל מאחורי כתובת מתווכת). Firebase Authentication שומר אותם עם חשבון המשחק, ואנחנו משתמשים
+      בהם רק כדי לחבר אתכם במכשיר אחר ולהביא אליו את ההתקדמות; הם אף פעם לא מוצגים לשחקנים אחרים ולא משמשים
+      לפרסום או לשיווק. אם בחשבון שאיתו נכנסתם כבר יש התקדמות, המשחק שואל איזו מהן לשמור. החיבור נשאר עד
+      שתמחקו את הנתונים (סעיף 14), שמוחק את החשבון עם החיבור, ובהתחברות עם Apple גם מבקש מ-Apple לבטל את הגישה
+      של המשחק.</p>
 
       <h2>3. מה השרת שלנו שומר</h2>
       <p>השרת שלנו הוא פרויקט Google Cloud / Firebase בארצות הברית (מסד נתונים Cloud Firestore באזור הרב-אזורי
@@ -456,13 +475,11 @@
       <h2>6. רכישות</h2>
       <p>הרכישות הן רשות: הסרת פרסומות, חבילות פנינים, חבילת הפתיחה, הקפאות רצף ותיקון רצף, ומנוי מועדון
       הדייגים. את התשלום מעבדות <strong>Apple App Store</strong> או <strong>Google Play</strong>; אנחנו אף
-      פעם לא רואים את פרטי הכרטיס או התשלום. הרכישות מנוהלות באמצעות <strong>RevenueCat</strong>. RevenueCat
-      מקבלת מהחנות את רשומת הרכישה (מוצר, מחיר, מטבע, תאריך, מדינת החנות, מזהה עסקה ומצב המנוי), את מזהה
-      חשבון המשחק שלכם (לפני שהמשחק מתחבר לרשת בפעם הראשונה, מזהה אקראי במקומו), את המזהה האקראי של העותק
-      הזה של המשחק, ואם האנליטיקה פעילה, גם את מזהה המופע שלו ב-Google Analytics (סעיף 7), ומידע בסיסי על
-      המכשיר והאפליקציה (מערכת הפעלה, גרסת האפליקציה) יחד עם כתובת ה-IP. RevenueCat שולחת אירועי רכישה לשרת
-      שלנו, ששומר אותם בקישור למזהה חשבון המשחק, ואם האנליטיקה פעילה, גם ל-Google Analytics. אנחנו משתמשים
-      בזה כדי לתת לכם את מה שקניתם, לשחזר אותו, לטפל בהחזרים ולספור מכירות.</p>
+      פעם לא רואים את פרטי הכרטיס או התשלום. המשחק מדבר עם החנות ישירות (<bdi>Google Play Billing</bdi>,
+      <bdi>Apple StoreKit</bdi>): החנות מודיעה למשחק בטלפון שלכם מה קניתם (מוצר, מזהה עסקה ומצב המנוי), והמשחק
+      שומר את הרישום הזה בטלפון ובגיבוי בענן (סעיף 3). אנחנו משתמשים בו כדי לתת לכם את מה שקניתם, לשחזר אותו
+      ולטפל בהחזרים. אף חברה אחרת לא מטפלת ברכישות שלכם. החנויות שולחות לנו דוחות מכירות שלא מציינים את חשבון
+      המשחק שלכם.</p>
       <p>אילו הצעות החנות מציגה לכם נקבע בטלפון שלכם, לפי ההתקדמות, הפעמים ששיחקתם והאם קניתם משהו. לבחירות
       האלה, ולתדירות הפרסומות (סעיף 5), אין השפעה משפטית או השפעה משמעותית דומה עליכם.</p>
 
@@ -519,7 +536,7 @@
       <h2>11. מי מקבל את המידע</h2>
       <p>אנחנו משתפים מידע רק עם השירותים שמפעילים את המשחק עבורנו: Google (Firebase Authentication,
       Cloud Firestore, Cloud Functions, Firebase Remote Config, Google Analytics for Firebase, AdMob, Google
-      Play), Apple (App Store, App Tracking Transparency) ו-RevenueCat. השירותים האלה מחויבים להגן על המידע
+      Play, Google Sign-In) ו-Apple (App Store, App Tracking Transparency, Sign in with Apple). השירותים האלה מחויבים להגן על המידע
       ברמה זהה או שווה לזו שמתוארת במדיניות הזאת. שחקנים אחרים רואים רק את הכינוי, האווטאר, התוצאות והמקומות
       שלכם. ייתכן שנמסור מידע גם כשהחוק מחייב. המדיניות שלהם:</p>
       <ul>
@@ -527,15 +544,14 @@
         <li><a href="https://policies.google.com/technologies/partner-sites">איך Google משתמשת במידע מאפליקציות שמשתמשות בשירותים שלה</a></li>
         <li><a href="https://firebase.google.com/support/privacy">פרטיות ואבטחה ב-Firebase</a></li>
         <li><a href="https://www.apple.com/legal/privacy/">מדיניות הפרטיות של Apple</a></li>
-        <li><a href="https://www.revenuecat.com/privacy">מדיניות הפרטיות של RevenueCat</a></li>
       </ul>
 
       <h2>12. איפה המידע נשמר</h2>
-      <p>המידע בשרת שלנו נשמר בארצות הברית. Google, Apple ו-RevenueCat עשויות לעבד מידע גם במדינות אחרות.
+      <p>המידע בשרת שלנו נשמר בארצות הברית. Google ו-Apple עשויות לעבד מידע גם במדינות אחרות.
       אנחנו מפעילים את המשחק מישראל, שהנציבות האירופית מכירה בה כמדינה שמעניקה הגנה נאותה למידע אישי.
       Google LLC מוסמכת במסגרת EU-U.S. Data Privacy Framework (כולל ההרחבות לבריטניה ולשווייץ), ו-Google
-      ו-RevenueCat מגנות על מידע מהאזור הכלכלי האירופי, מבריטניה ומשווייץ באמצעות הסעיפים החוזיים התקניים
-      (SCC) של הנציבות האירופית שבתנאי עיבוד הנתונים שלהן. מידע של שחקנים בישראל מועבר לחו"ל לפי התחייבויות
+      מגנה על מידע מהאזור הכלכלי האירופי, מבריטניה ומשווייץ באמצעות הסעיפים החוזיים התקניים
+      (SCC) של הנציבות האירופית שבתנאי עיבוד הנתונים שלה. מידע של שחקנים בישראל מועבר לחו"ל לפי התחייבויות
       בכתב של הספקים האלה להגנה על המידע. אפשר לבקש מאיתנו עותק של אמצעי ההגנה האלה.</p>
 
       <h2>13. כמה זמן אנחנו שומרים</h2>
@@ -546,9 +562,11 @@
         <li>תוצאות האגם היומי: 5 ימים, ואז הן נמחקות אוטומטית, בדרך כלל תוך יום נוסף.</li>
         <li>סטטיסטיקה של אגמים: נשמרת רק כסיכומים אנונימיים.</li>
         <li>יומנים טכניים: בדרך כלל כ-30 יום.</li>
-        <li>רשומות רכישה: Apple ו-Google שומרות את שלהן לפי הכללים שלהן. רשומת הלקוח שלכם ב-RevenueCat ואירועי
-        הרכישה בשרת שלנו נשמרים כל עוד החשבון קיים, ומחיקת הנתונים שלי מוחקת אותם. דוחות המכירות שהחנויות
+        <li>רשומות רכישה: Apple ו-Google שומרות את שלהן לפי הכללים שלהן. רישום הרכישות במשחק הוא חלק
+        מהשמירה שלכם (בטלפון ובגיבוי בענן) ונמחק איתה. דוחות המכירות שהחנויות
         שולחות לנו, שלא מציינים את חשבון המשחק שלכם, נשמרים כל עוד חוקי הנהלת החשבונות והמס מחייבים.</li>
+        <li>חיבור ל-Google או ל-Apple (רק אם חיברתם): כל עוד החשבון קיים. מחיקת הנתונים שלי מוחקת
+        אותו.</li>
         <li>אירועי אנליטיקה: חודשיים; אחר כך נשארים רק דוחות מצרפיים.</li>
         <li>מידע פרסומי ש-Google מחזיקה: לפי כללי השמירה של Google.</li>
         <li>אימיילים אלינו: כל עוד צריך כדי לענות לכם; בבקשות לגבי המידע שלכם, שנתיים, כתיעוד שטיפלנו
@@ -558,14 +576,14 @@
       <h2>14. מחיקת המידע</h2>
       <p>במשחק: <strong>הגדרות &larr; מחיקת הנתונים שלי &larr; למחוק הכול</strong>. השרת שלנו מוחק את הגיבוי
       בענן, את רשומות הליגה והדרבי מכל השבועות, את הרשומות שלכם בטבלאות המובילים, את תוצאות האגם היומי מהימים
-      האחרונים, את רשומת השחקן (כינוי, אווטאר, תיבת הפרסים, רשומות המשחק ההוגן), את רשומת הלקוח שלכם
-      ב-RevenueCat, את אירועי הרכישה בשרת שלנו ואת חשבון המשחק. אחרי שהשרת מאשר, המשחק מוחק את המידע בטלפון
+      האחרונים, את רשומת השחקן (כינוי, אווטאר, תיבת הפרסים, רשומות המשחק ההוגן), ואת חשבון המשחק עם החיבור
+      ל-Google או ל-Apple (בהתחברות עם Apple, המשחק מבקש קודם מ-Apple לבטל את הגישה שלו). אחרי שהשרת מאשר, המשחק מוחק את המידע בטלפון
       ומתחיל מחדש כשחקן חדש.</p>
       <p>הגיבוי בענן מוחלף קודם בסימון ריק "נמחק", כדי שעותק שעוד בדרך לא יוכל להחזיר את ההתקדמות. הסימון לא
       מכיל מידע מהמשחק, והוא נמחק אוטומטית תוך 3 ימים. יומנים טכניים נמחקים תוך כ-30 יום, והגיבויים של Google
       תוך כחצי שנה. הסיכומים של האגמים נשארים, כי הם לא מזהים אתכם. Apple ו-Google שומרות את רשומות הרכישה
       שלהן, ולכן הגדרות &larr; שחזור רכישות, באותו חשבון Apple או Google, עדיין מחזיר את הסרת הפרסומות, את
-      הסירה מחבילת הפתיחה ומנוי פעיל במועדון הדייגים (ואז RevenueCat יוצרת רשומה חדשה מהקבלה של החנות).
+      הסירה מחבילת הפתיחה ומנוי פעיל במועדון הדייגים.
       מחיקת המידע לא מבטלת מנוי.</p>
       <p>בלי האפליקציה: ראו את הדף <a href="delete-account.html#he">מחיקת החשבון והנתונים</a>, או כתבו לנו.</p>
 
@@ -582,9 +600,9 @@
       מודעות; אייפון: הגדרות &larr; פרטיות ואבטחה &larr; מעקב). לא נתייחס אליכם אחרת בגלל שהשתמשתם בזכויות
       האלה.</p>
       <p>לקליפורניה ולמדינות אחרות בארה"ב: אנחנו אוספים מזהים (מזהה חשבון המשחק, המזהה של העותק הזה של המשחק,
-      מזהי מכשיר ופרסום, כתובת IP), מידע מסחרי (היסטוריית רכישות), פעילות באינטרנט או ברשת אלקטרונית אחרת
+      מזהי מכשיר ופרסום, כתובת IP), מידע מסחרי (היסטוריית רכישות), אם התחברתם עם Google או Apple גם כתובת אימייל ושם, פעילות באינטרנט או ברשת אלקטרונית אחרת
       (אירועי משחק, פרסומות שהוצגו ולחיצות עליהן) ומיקום משוער (מכתובת ה-IP). אנחנו אוספים אותם מכם, מהמכשיר,
-      מ-Apple, מ-Google ומ-RevenueCat, משתמשים בהם למטרות שבסעיף 10 ומוסרים אותם לשירותים שבסעיף 11. אנחנו
+      מ-Apple ומ-Google, משתמשים בהם למטרות שבסעיף 10 ומוסרים אותם לשירותים שבסעיף 11. אנחנו
       לא אוספים מידע אישי רגיש. אנחנו לא מוכרים מידע אישי תמורת כסף, אבל השימוש של Google במזהים ובפעילות
       הפרסומית לפרסומות מותאמות אישית עשוי להיחשב "מכירה" או "שיתוף"; אפשר לבטל זאת כמתואר למעלה. אנחנו לא
       מוכרים או משתפים ביודעין מידע אישי של מי שמתחת לגיל 16. אפשר להגיש בקשה דרך נציג מורשה; ייתכן שנבקש
