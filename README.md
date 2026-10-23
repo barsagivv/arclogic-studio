@@ -1,5 +1,9 @@
 # ArcLogic Studio — policy pages
 
+> **Since 2026-10-23 the studio is DoublePixel.** The games' pages here keep their addresses
+> (stores link to them) and now name DoublePixel; `index.html` forwards to
+> <https://doublepixel-studio.github.io/>, which lists every game. New games go there, not here.
+
 The privacy policies and terms for our games, served by GitHub Pages at
 <https://barsagivv.github.io/arclogic-studio/>.
 
